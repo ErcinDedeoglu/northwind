@@ -22,3 +22,7 @@ Unzip / decompress the file then open the sql file in Sql Server Management Stud
 OR
 run the below command (sample)
 sqlcmd -S Localhost -d Northwind -i D:\Sql\Northwind.sql
+
+************
+Query Examples:
+SELECT OD.ProductID, SUM(Quantity) FROM [Order Details] as OD inner join Products on Products.ProductID = OD.ProductID group by OD.ProductID
